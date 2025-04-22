@@ -175,7 +175,15 @@ done
 
 ![image](/assets/Screenshot%202025-04-22%20215307.png)
 
-Find IP of docker containers
+### 5. Verify containers are up and running:
+
+```bash
+docker ps
+```
+
+![image](/assets/Screenshot%202025-04-22%20233834.png)
+
+### 6. Find IP of docker containers (optional ps~ we wont use this because of port mapping):
 
 ```bash
 for i in {1..5}; do
@@ -186,7 +194,7 @@ done
 
 ![image](/assets/Screenshot%202025-04-22%20232124.png)
 
-### 5. Create Inventory File in the current directory
+### 7. Create Inventory File in the current directory
 
 Create `inventory.ini`:
 
@@ -205,7 +213,9 @@ ansible_python_interpreter=/usr/bin/python3
 ansible_ssh_common_args='-o StrictHostKeyChecking=no'
 ```
 
-### 6. Create Ansible Playbook in the current directory
+![image](/assets/Screenshot%202025-04-22%20233237.png)
+
+### 8. Create Ansible Playbook in the current directory
 
 Create `playbook.yml`:
 
@@ -247,6 +257,18 @@ Create `playbook.yml`:
                 - "System info: {{ uname_output.stdout }}"
                 - "Disk space: {{ disk_space.stdout_lines }}"
 ```
+
+![image](/assets/Screenshot%202025-04-22%20233543.png)
+
+### 9. Run Ansible Playbook
+
+```bash
+ansible-playbook -i inventory.ini playbook.yml
+```
+
+![image](/assets/Screenshot%202025-04-22%20234708.png)
+![image](/assets/Screenshot%202025-04-22%20234751.png)
+![image](/assets/Screenshot%202025-04-22%20234845.png)
 
 ## Verification
 
