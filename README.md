@@ -300,6 +300,12 @@ for i in {1..5}; do
 done
 ```
 
+![image](/assets/Screenshot%202025-04-23%20001035.png)
+![image](/assets/Screenshot%202025-04-23%20001113.png)
+![image](/assets/Screenshot%202025-04-23%20001128.png)
+![image](/assets/Screenshot%202025-04-23%20001548.png)
+![image](/assets/Screenshot%202025-04-23%20001628.png)
+
 ### Ansible Verification
 
 ```bash
@@ -309,6 +315,9 @@ ansible servers -i inventory.ini -m stat -a "path=/root/test_file.txt"
 # Check Python version
 ansible servers -i inventory.ini -m command -a "python3 --version"
 ```
+
+![image](/assets/Screenshot%202025-04-23%20001805.png)
+![image](/assets/Screenshot%202025-04-23%20001921.png)
 
 ## Cleanup
 
@@ -324,6 +333,8 @@ done
 # Remove SSH keys
 rm -rf .ssh
 ```
+
+![image](/assets/Screenshot%202025-04-23%20002140.png)
 
 ## Troubleshooting
 
