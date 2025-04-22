@@ -120,6 +120,8 @@ cd ~/ansible-demo
 mkdir -p .ssh
 ```
 
+![image](/assets/Screenshot%202025-04-22%20211459.png)
+
 ### 3. Generate SSH Keys
 
 ```bash
@@ -131,6 +133,8 @@ chmod 700 .ssh
 chmod 600 .ssh/ansible_key
 chmod 644 .ssh/ansible_key.pub
 ```
+
+![image](/assets/Screenshot%202025-04-22%20215141.png)
 
 ### 4. Create Docker Containers
 
@@ -168,6 +172,19 @@ for i in {1..5}; do
     docker exec server$i bash -c "service ssh start"
 done
 ```
+
+![image](/assets/Screenshot%202025-04-22%20215307.png)
+
+Find IP of docker containers
+
+```bash
+for i in {1..5}; do
+  echo -e "\n IP if server${i}"
+  docker inspect server${i} | grep IPAddress
+done
+```
+
+![image](/assets/Screenshot%202025-04-22%20232124.png)
 
 ### 5. Create Inventory File in the current directory
 
