@@ -99,13 +99,18 @@ This project demonstrates how to use Ansible to manage multiple Docker container
 
 ### 1. Install Required Software
 
-In WSL2, install Ansible and SSH client:
+In WSL2, install Ansible and SSH client, and docker integration with WSL distros:
 
 ```bash
 wsl --install
 sudo apt update
 sudo apt install -y ansible openssh-client
 ```
+
+![image](/assets/Screenshot%202025-04-22%20225746.png)
+![image](/assets/Screenshot%202025-04-22%20193109.png)
+![image](/assets/image.png)
+![image](/assets/Screenshot%202025-04-22%20211539.png)
 
 ### 2. Create Project Directory
 
